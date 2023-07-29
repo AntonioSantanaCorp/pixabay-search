@@ -1,0 +1,15 @@
+<div class="search-card">
+    <mat-form-field appearance="outline">
+        <mat-icon matPrefix>image_search</mat-icon>
+        <mat-label> Search images </mat-label>
+        <input matInput>
+        <aside style="margin-right: 7px;" matSuffix>
+            <button  mat-icon-button color="primary" aria-label="Search data">
+                <mat-icon>search</mat-icon>
+            </button>
+            <button (click)="openSetFilters()" mat-icon-button  color="primary" aria-label="Search data">
+                <mat-icon>tune</mat-icon>
+            </button>
+        </aside>
+    </mat-form-field>
+</div>

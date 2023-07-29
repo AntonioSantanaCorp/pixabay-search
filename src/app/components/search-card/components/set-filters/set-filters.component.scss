@@ -1,0 +1,19 @@
+:host::ng-deep.mdc-dialog__title::before {
+    height: auto !important;
+}
+
+.title {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 5px;
+    align-items: center;
+}
+
+.filters {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25em, 1fr));
+}
+
+mat-option{
+    text-transform: capitalize;
+}

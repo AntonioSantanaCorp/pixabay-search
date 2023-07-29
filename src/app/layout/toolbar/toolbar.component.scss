@@ -1,0 +1,10 @@
+.toolbar {
+    display: flex;
+    justify-content: space-between;
+    border-radius: 5px;
+
+    &__icons-section {
+        display: flex;
+        align-items: center;
+    }
+}
