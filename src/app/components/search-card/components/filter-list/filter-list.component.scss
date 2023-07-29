@@ -1,0 +1,17 @@
+.filters-chips {
+    border: 1px solid lightgray;
+    border-radius: 6px;
+    padding: 5px;
+}
+
+.add-chip-label {
+    background: transparent !important;
+    border: 2.5px dashed  gray;
+
+    &__content {
+        display: flex;
+        align-items: center;
+        color: gray;
+    
+    }
+}

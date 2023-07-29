@@ -7,11 +7,12 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 import { SetFiltersComponent } from './components/set-filters/set-filters.component';
+import { FilterListComponent } from './components/filter-list/filter-list.component';
 
 @Component({
   selector: 'app-search-card',
   standalone: true,
-  imports: [CommonModule, MatCardModule, MatInputModule, MatFormFieldModule, MatIconModule, MatButtonModule, MatDialogModule],
+  imports: [CommonModule, FilterListComponent, MatCardModule, MatInputModule, MatFormFieldModule, MatIconModule, MatButtonModule, MatDialogModule],
   templateUrl: './search-card.component.html',
   styleUrls: ['./search-card.component.scss']
 })
