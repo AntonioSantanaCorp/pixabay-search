@@ -8,6 +8,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 import { SetFiltersComponent } from './components/set-filters/set-filters.component';
 import { FilterListComponent } from './components/filter-list/filter-list.component';
+import { FiltersConfigService } from 'src/app/services/filters-config.service';
 
 @Component({
   selector: 'app-search-card',
@@ -18,9 +19,9 @@ import { FilterListComponent } from './components/filter-list/filter-list.compon
 })
 export class SearchCardComponent {
 
-  private readonly _dialog = inject(MatDialog)
+  private readonly _filtersConfigService = inject(FiltersConfigService)
 
   openSetFilters() {
-    this._dialog.open(SetFiltersComponent)
+    this._filtersConfigService.openFiltersPopup()
   }
 }

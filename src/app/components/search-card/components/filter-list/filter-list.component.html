@@ -3,11 +3,11 @@
         <mat-expansion-panel-header>
             <mat-panel-title>
                 <mat-icon>tune</mat-icon>
-                Current filters
+                <h3 style="margin: 0;">Current filters</h3>
             </mat-panel-title>
         </mat-expansion-panel-header>
 
-        <mat-chip-row class="add-chip-label">
+        <mat-chip-row (click)="openFiltersPopup()" class="add-chip-label">
             <div class="add-chip-label__content">
                 <mat-icon>add</mat-icon>
                 Add new filter
