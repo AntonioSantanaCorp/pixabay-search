@@ -11,9 +11,9 @@ export class NumberSuffixPipe implements PipeTransform {
 
     if (valueString.length <= 3) return valueString
     if (valueString.length >= 4 && valueString.length <= 6)
-      return `${valueString[0]}${valueString[1]}K`
+      return `${valueString[0]}K`
     if (valueString.length > 6)
-      return `${valueString[0]}${valueString[1]}M`
+      return `${valueString[0]}M`
 
     return '';
   }
