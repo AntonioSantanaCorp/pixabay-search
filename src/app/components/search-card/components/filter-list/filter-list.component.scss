@@ -1,17 +1,22 @@
 .filters-chips {
-    border: 1px solid lightgray;
-    border-radius: 6px;
-    padding: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    gap:7px;
+    text-transform: capitalize;
+
+    &__filter-label {
+        font-weight: bold;
+    }
 }
 
 .add-chip-label {
     background: transparent !important;
-    border: 2.5px dotted  gray;
+    border: 2.5px dotted gray;
 
     &__content {
         display: flex;
         align-items: center;
         color: gray;
-    
+
     }
 }

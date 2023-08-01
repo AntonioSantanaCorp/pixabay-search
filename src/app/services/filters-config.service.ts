@@ -23,6 +23,7 @@ export class FiltersConfigService {
   saveFilters(filter: Filter) {
     const newFilters = Object.keys(filter)
       .reduce((accum: Filter[], key) => {
+        debugger
         const result = filter[key as FilterType]
         if (result) return [...accum, (<Filter>{ [key]: result })]
         return [...accum]

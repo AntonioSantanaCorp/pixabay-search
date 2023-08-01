@@ -7,11 +7,20 @@ import { MatExpansionModule } from '@angular/material/expansion';
 import { FiltersConfigService } from 'src/app/services/filters-config.service';
 import { Filter, FilterType } from 'src/app/core/types/main.types';
 import { getObjectMainProp } from 'src/app/core/utils/main.util';
+import { GetFilterValuePipe } from 'src/app/pipes/get-filter-value.pipe';
+import { GetFilterPropPipe } from 'src/app/pipes/get-filter-prop.pipe';
 
 @Component({
   selector: 'app-filter-list',
   standalone: true,
-  imports: [CommonModule, MatChipsModule, MatButtonModule, MatIconModule, MatExpansionModule],
+  imports: [
+    CommonModule,
+    MatChipsModule,
+    MatButtonModule,
+    MatIconModule,
+    MatExpansionModule,
+    GetFilterValuePipe,
+    GetFilterPropPipe],
   templateUrl: './filter-list.component.html',
   styleUrls: ['./filter-list.component.scss']
 })
