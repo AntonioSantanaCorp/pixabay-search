@@ -7,6 +7,7 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { MatButtonModule, MatIconButton } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatTooltipModule } from '@angular/material/tooltip';
+import { NumberSuffixPipe } from 'src/app/pipes/number-suffix.pipe';
 
 @Component({
   selector: 'app-item-result',
@@ -18,7 +19,8 @@ import { MatTooltipModule } from '@angular/material/tooltip';
     MatGridListModule,
     MatButtonModule,
     MatIconModule,
-    MatTooltipModule
+    MatTooltipModule,
+    NumberSuffixPipe
   ],
   templateUrl: './item-result.component.html',
   styleUrls: ['./item-result.component.scss']

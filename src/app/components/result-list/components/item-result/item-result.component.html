@@ -9,7 +9,8 @@
     <mat-card-actions style="justify-content: space-between;">
         <aside>
             <button matTooltip="Views" aria-label="Show amount of views" mat-flat-button>
-                <mat-icon class="material-icons-outlined">desktop_windows</mat-icon> {{itemResult.views}}
+                <mat-icon class="material-icons-outlined">desktop_windows</mat-icon> 
+                {{itemResult.views | numberSuffix}}
             </button>
             <button matTooltip="Likes" aria-label="Show amount of likes" mat-flat-button>
                 <mat-icon class="material-icons-outlined">thumb_up</mat-icon> {{itemResult.likes}}
