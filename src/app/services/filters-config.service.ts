@@ -1,4 +1,4 @@
-import { Injectable, effect, inject, signal } from '@angular/core';
+import { Injectable, computed, effect, inject, signal } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { SetFiltersComponent } from '../components/search-card/components/set-filters/set-filters.component';
 import { Filter, FilterType } from '../core/types/main.types';
@@ -9,6 +9,9 @@ import { Filter, FilterType } from '../core/types/main.types';
 export class FiltersConfigService {
 
   public readonly filters = signal<Filter[]>([])
+
+  public readonly filterObject = computed(() => this.filters()
+    .reduce((accum: Filter, currValue) => ({ ...accum, ...currValue }), {}))
 
   private readonly _dialog = inject(MatDialog)
 
@@ -23,7 +26,6 @@ export class FiltersConfigService {
   saveFilters(filter: Filter) {
     const newFilters = Object.keys(filter)
       .reduce((accum: Filter[], key) => {
-        debugger
         const result = filter[key as FilterType]
         if (result) return [...accum, (<Filter>{ [key]: result })]
         return [...accum]

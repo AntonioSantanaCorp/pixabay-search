@@ -8,6 +8,7 @@ import { ToolbarComponent } from './layout/toolbar/toolbar.component';
 import { HttpClientModule } from '@angular/common/http';
 import { SearchCardComponent } from './components/search-card/search-card.component';
 import { ResultListComponent } from './components/result-list/result-list.component';
+import { API_URL } from './core/constant/main.constant';
 
 @NgModule({
   declarations: [
@@ -20,9 +21,9 @@ import { ResultListComponent } from './components/result-list/result-list.compon
     HttpClientModule,
     ToolbarComponent,
     SearchCardComponent,
-    ResultListComponent
+    ResultListComponent,
+    HttpClientModule
   ],
-  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

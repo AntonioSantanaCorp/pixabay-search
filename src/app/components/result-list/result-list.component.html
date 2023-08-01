@@ -1,1 +1,3 @@
-<p>result-list works!</p>
+<p *ngFor="let result of resultList()?.hits">
+    {{result.tags}}
+</p>

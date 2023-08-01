@@ -1,4 +1,3 @@
 <app-toolbar></app-toolbar>
-<app-search-card></app-search-card>
-
-<app-result-list></app-result-list>
+<app-search-card (searchedValue)="onSearch($event)"></app-search-card>
+<app-result-list [resultList]="resultList"></app-result-list>

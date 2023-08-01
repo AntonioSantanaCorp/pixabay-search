@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, Input, WritableSignal } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { ImageResult, Pageable } from 'src/app/core/interfaces/main.interface';
 
 @Component({
   selector: 'app-result-list',
@@ -9,5 +10,5 @@ import { CommonModule } from '@angular/common';
   styleUrls: ['./result-list.component.scss']
 })
 export class ResultListComponent {
-
+  @Input() resultList!: WritableSignal<Pageable<ImageResult> | null>
 }

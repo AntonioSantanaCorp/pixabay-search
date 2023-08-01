@@ -17,7 +17,9 @@
         <ng-template #listFilters>
             <div class="filters-chips" aria-label="filters selected">
                 <mat-chip-row *ngFor="let filter of filters">
-                    <label class="filters-chips__filter-label">{{filter| getFilterProp}}</label>: {{filter| getFilterValue}}
+                    <label class="filters-chips__filter-label">
+                        {{filter| getFilterProp}}
+                    </label>: {{filter | getFilterValue}}
                     <button matChipRemove (click)="removeFilter(filter)">
                         <mat-icon>cancel</mat-icon>
                     </button>

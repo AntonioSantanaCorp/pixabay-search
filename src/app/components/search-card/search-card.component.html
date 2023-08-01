@@ -2,18 +2,18 @@
     <mat-form-field appearance="outline">
         <mat-icon matPrefix>image_search</mat-icon>
         <mat-label> Search images </mat-label>
-        <input matInput>
+        <input matInput #search>
         <aside style="margin-right: 7px;" matSuffix>
-            <button mat-icon-button color="primary" aria-label="Search data">
+            <button (click)="onSearch(search.value)" mat-icon-button color="primary" aria-label="Search data">
                 <mat-icon>search</mat-icon>
             </button>
             <button (click)="openSetFilters()" mat-icon-button color="primary" aria-label="Search data">
-                <mat-icon aria-hidden="false" [matBadge]="amountFilters" [matBadgeHidden]="amountFilters==0" matBadgeOverlap="false">
+                <mat-icon aria-hidden="false" [matBadge]="amountFilters" [matBadgeHidden]="amountFilters==0"
+                    matBadgeOverlap="false">
                     tune
                 </mat-icon>
             </button>
         </aside>
     </mat-form-field>
-
     <app-filter-list></app-filter-list>
 </div>
