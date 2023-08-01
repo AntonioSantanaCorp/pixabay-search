@@ -8,6 +8,9 @@ mat-card {
     img {
         animation: appear-img 2s linear;
         border-radius: inherit;
+        border-top-right-radius: var(--mdc-elevated-card-container-shape);
+        border-top-left-radius: var(--mdc-elevated-card-container-shape);
+
     }
 }
 
