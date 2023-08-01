@@ -5,7 +5,8 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { FiltersConfigService } from 'src/app/services/filters-config.service';
-import { Filter } from 'src/app/core/types/main.types';
+import { Filter, FilterType } from 'src/app/core/types/main.types';
+import { getObjectMainProp } from 'src/app/core/utils/main.util';
 
 @Component({
   selector: 'app-filter-list',
@@ -27,7 +28,8 @@ export class FilterListComponent {
   }
 
   removeFilter(filter: Filter) {
-
+    const filterKey = <FilterType>getObjectMainProp(filter)
+    this._filtersService.removeFilter(filterKey)
   }
 
 }
