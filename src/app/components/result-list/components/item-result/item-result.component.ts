@@ -5,6 +5,8 @@ import { ImageResult } from 'src/app/core/interfaces/main.interface';
 import { NgOptimizedImage } from '@angular/common'
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatButtonModule, MatIconButton } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
+import { MatTooltipModule } from '@angular/material/tooltip';
 
 @Component({
   selector: 'app-item-result',
@@ -14,7 +16,9 @@ import { MatButtonModule, MatIconButton } from '@angular/material/button';
     MatCardModule,
     NgOptimizedImage,
     MatGridListModule,
-    MatButtonModule
+    MatButtonModule,
+    MatIconModule,
+    MatTooltipModule
   ],
   templateUrl: './item-result.component.html',
   styleUrls: ['./item-result.component.scss']
