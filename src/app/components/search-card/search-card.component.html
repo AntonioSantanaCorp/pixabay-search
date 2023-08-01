@@ -4,11 +4,13 @@
         <mat-label> Search images </mat-label>
         <input matInput>
         <aside style="margin-right: 7px;" matSuffix>
-            <button  mat-icon-button color="primary" aria-label="Search data">
+            <button mat-icon-button color="primary" aria-label="Search data">
                 <mat-icon>search</mat-icon>
             </button>
-            <button (click)="openSetFilters()" mat-icon-button  color="primary" aria-label="Search data">
-                <mat-icon>tune</mat-icon>
+            <button (click)="openSetFilters()" mat-icon-button color="primary" aria-label="Search data">
+                <mat-icon aria-hidden="false" [matBadge]="amountFilters" [matBadgeHidden]="amountFilters==0" matBadgeOverlap="false">
+                    tune
+                </mat-icon>
             </button>
         </aside>
     </mat-form-field>

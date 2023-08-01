@@ -6,33 +6,30 @@
     <mat-divider></mat-divider>
 </h1>
 
-<div class="filters" mat-dialog-content>
-    <mat-form-field>
+<form  [formGroup]="filterForm" class="filters" mat-dialog-content>
+    <mat-form-field >
         <mat-label>Image type</mat-label>
-        <mat-select>
+        <mat-select formControlName="image_type">
             <mat-option>-- Select an option --</mat-option>
-
             <mat-option value="all">all</mat-option>
             <mat-option value="photo">photo</mat-option>
             <mat-option value="illustration">illustration</mat-option>
         </mat-select>
     </mat-form-field>
 
-    <mat-form-field>
+    <mat-form-field >
         <mat-label>Order</mat-label>
-        <mat-select>
+        <mat-select formControlName="order">
             <mat-option>-- Select an option --</mat-option>
-
             <mat-option value="popular">popular</mat-option>
             <mat-option value="latest">latest</mat-option>
         </mat-select>
     </mat-form-field>
 
-    <mat-form-field>
+    <mat-form-field >
         <mat-label>Colors</mat-label>
-        <mat-select>
+        <mat-select formControlName="colors">
             <mat-option>-- Select an option --</mat-option>
-
             <mat-option value="grayscale">grayscale</mat-option>
             <mat-option value="transparent">transparent</mat-option>
             <mat-option value="red">red</mat-option>
@@ -50,9 +47,9 @@
         </mat-select>
     </mat-form-field>
 
-    <mat-form-field>
+    <mat-form-field >
         <mat-label>Category</mat-label>
-        <mat-select>
+        <mat-select formControlName="category">
             <mat-option>-- Select an option --</mat-option>
             <mat-option value="backgrounds">backgrounds</mat-option>
             <mat-option value="fashion">fashion</mat-option>
@@ -74,8 +71,8 @@
     <mat-slide-toggle color="primary">
         Enable safe search?
     </mat-slide-toggle>
-</div>
+</form>
 <div mat-dialog-actions align="end">
     <button mat-raised-button mat-dialog-close>Cancel</button>
-    <button mat-raised-button color="primary" mat-dialog-close cdkFocusInitial>Save</button>
+    <button (click)="saveChanges()" mat-raised-button color="primary"  cdkFocusInitial>Save</button>
 </div>

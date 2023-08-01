@@ -7,27 +7,24 @@
             </mat-panel-title>
         </mat-expansion-panel-header>
 
-        <mat-chip-row (click)="openFiltersPopup()" class="add-chip-label">
+        <mat-chip-row *ngIf="filters.length==0; else listFilters" (click)="openFiltersPopup()" class="add-chip-label">
             <div class="add-chip-label__content">
                 <mat-icon>add</mat-icon>
                 Add new filter
             </div>
         </mat-chip-row>
 
-        <!-- <mat-chip-grid aria-label="Enter fruits">
-            <mat-chip-row>
-                test
-                <button matChipRemove>
-                    <mat-icon>cancel</mat-icon>
-                </button>
-            </mat-chip-row>
-            <mat-chip-row>
-                test2
-                <button matChipRemove>
-                    <mat-icon>cancel</mat-icon>
-                </button>
-            </mat-chip-row>
-        </mat-chip-grid> -->
+        <ng-template #listFilters>
+            <div aria-label="filters selected">
+                <mat-chip-row *ngFor="let filter of filters">
+                    {{filter}}
+                    <button matChipRemove (click)="removeFilter(filter)">
+                        <mat-icon>cancel</mat-icon>
+                    </button>
+                </mat-chip-row>
+
+            </div>
+        </ng-template>
 
     </mat-expansion-panel>
 </mat-accordion>
