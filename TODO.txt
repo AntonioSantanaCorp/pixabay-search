@@ -1,3 +1,5 @@
 *Agregar paginador
 *Agregar dark mode
 *Agregar mensaje, no se encuentra imagenes
+*convertir botones del menu responsive
+*convetir el search button responsive
