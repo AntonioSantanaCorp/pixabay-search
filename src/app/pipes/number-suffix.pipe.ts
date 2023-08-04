@@ -8,10 +8,9 @@ export class NumberSuffixPipe implements PipeTransform {
 
   transform(value: number): string {
     const { U, K, M } = this.getUnits(value)
-    console.log(value, { U, K, M })
 
     if (K.length < 2) return `${K.join('')}${U.join('')}`
-    if (K.length == 3 && M.length == 0) return `${K.join('')}.${U.slice(0, 1).join('')}K`
+    if (K.length == 3 && M.length == 0) return `${K.join('').slice(0, 2)}K`
 
     return `${M.join('')}.${K.slice(0, 1).join('')}M`;
   }

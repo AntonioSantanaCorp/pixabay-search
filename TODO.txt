@@ -1,0 +1,2 @@
+*Agregar dark mode
+*Agregar mensaje, no se encuentra imagenes

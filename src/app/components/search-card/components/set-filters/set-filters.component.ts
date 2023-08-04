@@ -19,7 +19,6 @@ import { FiltersConfigService } from 'src/app/services/filters-config.service';
   imports: [
     CommonModule,
     MatDividerModule,
-    MatDividerModule,
     MatDialogModule,
     MatButtonModule,
     MatSlideToggleModule,

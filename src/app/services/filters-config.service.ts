@@ -15,10 +15,6 @@ export class FiltersConfigService {
 
   private readonly _dialog = inject(MatDialog)
 
-  constructor() {
-    effect(() => console.log(this.filters()))
-  }
-
   openFiltersPopup() {
     return this._dialog.open(SetFiltersComponent)
   }

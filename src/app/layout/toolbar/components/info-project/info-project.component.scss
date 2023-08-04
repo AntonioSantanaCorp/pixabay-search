@@ -1,0 +1,10 @@
+:host::ng-deep.mdc-dialog__title::before {
+    height: auto !important;
+}
+
+.title {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 5px;
+    align-items: center;
+}

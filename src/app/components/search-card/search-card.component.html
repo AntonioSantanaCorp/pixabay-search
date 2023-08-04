@@ -1,13 +1,13 @@
-<div class="search-card">
+<form (submit)="onSearch(search.value)" class="search-card">
     <mat-form-field appearance="outline">
         <mat-icon matPrefix>image_search</mat-icon>
         <mat-label> Search images </mat-label>
         <input matInput #search>
         <aside style="margin-right: 7px;" matSuffix>
-            <button (click)="onSearch(search.value)" mat-icon-button color="primary" aria-label="Search data">
+            <button type="submit" mat-icon-button color="primary" aria-label="Search data">
                 <mat-icon>search</mat-icon>
             </button>
-            <button (click)="openSetFilters()" mat-icon-button color="primary" aria-label="Search data">
+            <button type="button" (click)="openSetFilters()" mat-icon-button color="primary" aria-label="Search data">
                 <mat-icon aria-hidden="false" [matBadge]="amountFilters" [matBadgeHidden]="amountFilters==0"
                     matBadgeOverlap="false">
                     tune
@@ -16,4 +16,4 @@
         </aside>
     </mat-form-field>
     <app-filter-list></app-filter-list>
-</div>
+</form>

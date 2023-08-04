@@ -14,13 +14,11 @@ mat-card {
 
     mat-card-actions {
         justify-content: space-between;
-        gap:1px;
 
         aside {
             display: grid;
             grid-template-columns: 1fr 1fr;
             justify-content: space-between;
-            gap: 1px;
             width: 100%;
         }
     }

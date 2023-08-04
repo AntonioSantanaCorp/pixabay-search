@@ -9,15 +9,27 @@
     <mat-card-actions style="justify-content: space-between;">
         <aside>
             <button matTooltip="Views" aria-label="Show amount of views" mat-flat-button>
-                <mat-icon class="material-icons-outlined">desktop_windows</mat-icon> 
+                <mat-icon class="material-icons-outlined">desktop_windows</mat-icon>
                 {{itemResult.views | numberSuffix}}
             </button>
             <button matTooltip="Likes" aria-label="Show amount of likes" mat-flat-button>
-                <mat-icon class="material-icons-outlined">thumb_up</mat-icon> {{itemResult.likes}}
+                <mat-icon class="material-icons-outlined">thumb_up</mat-icon>
+                {{itemResult.likes | numberSuffix}}
             </button>
         </aside>
-        <button mat-icon-button>
+        <button mat-icon-button [matMenuTriggerFor]="menu">
             <mat-icon>more_vert</mat-icon>
         </button>
     </mat-card-actions>
 </mat-card>
+
+<mat-menu #menu="matMenu">
+    <a [href]="itemResult.largeImageURL" target="_blank" mat-menu-item>
+        <mat-icon class="material-icons-outlined">open_in_new</mat-icon>
+        Open Image
+    </a>
+    <button (click)="onDowloadFile()" mat-menu-item>
+        <mat-icon class="material-icons-outlined">download</mat-icon>
+        Download Image
+    </button>
+</mat-menu>
