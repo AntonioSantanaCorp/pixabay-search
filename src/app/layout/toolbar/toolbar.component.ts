@@ -7,7 +7,7 @@ import { DomSanitizer } from '@angular/platform-browser';
 import { UserMenuComponent } from './components/user-menu/user-menu.component';
 import { InfoProjectComponent } from './components/info-project/info-project.component';
 import { MatDialog } from '@angular/material/dialog';
-
+import {MatTooltipModule} from '@angular/material/tooltip';
 
 @Component({
   selector: 'app-toolbar',
@@ -18,7 +18,8 @@ import { MatDialog } from '@angular/material/dialog';
     MatIconModule,
     MatButtonModule,
     UserMenuComponent,
-    InfoProjectComponent
+    InfoProjectComponent,
+    MatTooltipModule
   ],
   templateUrl: './toolbar.component.html',
   styleUrls: ['./toolbar.component.scss']
