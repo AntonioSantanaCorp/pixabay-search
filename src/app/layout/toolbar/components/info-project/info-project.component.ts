@@ -6,7 +6,6 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatListModule } from '@angular/material/list';
-import { DomSanitizer } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-info-project',
