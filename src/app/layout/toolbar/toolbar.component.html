@@ -9,17 +9,16 @@
             <mat-icon>construction</mat-icon>
         </button>
         <app-user-menu />
-        <!-- <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
-            <mat-icon>dark_mode</mat-icon>
-        </button> -->
-        <button (click)="openInfoDialog()" class="material-icons-outlined" mat-icon-button
-            aria-label="Info of the current project">
+
+        <app-switch-theme matTooltip="Click to change theme"></app-switch-theme>
+
+        <button matTooltip="See application info" (click)="openInfoDialog()" class="material-icons-outlined"
+            mat-icon-button aria-label="Info of the current project">
             <mat-icon>info</mat-icon>
         </button>
 
-
-        <a href="https://www.linkedin.com/in/antonio-santana-153015201" target="_blank" mat-icon-button
-            aria-label="Icon link to navigate linkedin">
+        <a matTooltip="Go to my Linkedin profile" href="https://www.linkedin.com/in/antonio-santana-153015201"
+            target="_blank" mat-icon-button aria-label="Icon link to navigate linkedin">
             <mat-icon svgIcon="linkedin"></mat-icon>
         </a>
     </aside>

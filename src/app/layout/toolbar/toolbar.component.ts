@@ -8,6 +8,7 @@ import { UserMenuComponent } from './components/user-menu/user-menu.component';
 import { InfoProjectComponent } from './components/info-project/info-project.component';
 import { MatDialog } from '@angular/material/dialog';
 import {MatTooltipModule} from '@angular/material/tooltip';
+import { SwitchThemeComponent } from './components/switch-theme/switch-theme.component';
 
 @Component({
   selector: 'app-toolbar',
@@ -19,7 +20,8 @@ import {MatTooltipModule} from '@angular/material/tooltip';
     MatButtonModule,
     UserMenuComponent,
     InfoProjectComponent,
-    MatTooltipModule
+    MatTooltipModule,
+    SwitchThemeComponent
   ],
   templateUrl: './toolbar.component.html',
   styleUrls: ['./toolbar.component.scss']

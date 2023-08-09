@@ -34,7 +34,7 @@ export class ItemResultComponent {
 
   private readonly _elemRef = inject(ElementRef)
 
-  onDowloadFile() {
+  protected onDowloadFile() {
     fetch(this.itemResult.largeImageURL)
       .then(response => response.blob())
       .then(blob => {

@@ -1,4 +1,4 @@
-import { Component,  effect, inject, signal } from '@angular/core';
+import { Component, effect, inject, signal } from '@angular/core';
 import { SearchConfigService } from './services/search-config.service';
 import { HttpFilterService } from './services/http-filter.service';
 import { ImageResult, Pageable } from './core/interfaces/main.interface';
@@ -6,6 +6,7 @@ import { ImageResult, Pageable } from './core/interfaces/main.interface';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
+  // host: { class: 'theme-dark' },
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {

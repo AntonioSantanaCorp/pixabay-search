@@ -1,5 +1,4 @@
-*Agregar paginador
-*Agregar dark mode
+*Guardar el theme seleccionado en el localstorage
 *Agregar mensaje, no se encuentra imagenes
 *convertir botones del menu responsive
 *convetir el search button responsive
