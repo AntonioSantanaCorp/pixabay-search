@@ -11,8 +11,8 @@ import { Filter } from '../core/types/main.types';
 export class HttpFilterService {
   private readonly _httpClient = inject(HttpClient)
 
-  getResults(search: string, filters: Filter): Observable<Pageable<ImageResult>> {
-    const params = new HttpParams({ fromObject: { q: search, ...filters } })
+  getResults(search: string, filters: Filter, pageIndex: number = 1): Observable<Pageable<ImageResult>> {
+    const params = new HttpParams({ fromObject: { q: search, ...filters, page: pageIndex } })
     return this._httpClient.get<Pageable<ImageResult>>(API_URL, { params })
   }
 }

@@ -10,8 +10,7 @@ import { MatDialogModule, MatDialogRef } from '@angular/material/dialog';
 import { MatDividerModule } from '@angular/material/divider';
 import { FormArray, FormGroup, ReactiveFormsModule } from '@angular/forms';
 import { FILTER_FORM } from 'src/app/core/constant/main.constant';
-
-import { FiltersConfigService } from 'src/app/services/filters-config.service';
+import { SearchConfigService } from 'src/app/services/search-config.service';
 
 @Component({
   selector: 'app-set-filters',
@@ -32,7 +31,7 @@ import { FiltersConfigService } from 'src/app/services/filters-config.service';
   styleUrls: ['./set-filters.component.scss']
 })
 export class SetFiltersComponent implements OnInit, OnDestroy {
-  private readonly _filtersService = inject(FiltersConfigService)
+  private readonly _filtersService = inject(SearchConfigService)
 
   private readonly _dialogRef = inject(MatDialogRef<SetFiltersComponent>)
 

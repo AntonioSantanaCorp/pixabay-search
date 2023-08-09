@@ -1,3 +1,6 @@
-<ng-container *ngFor="let result of resultList()?.hits">
-    <app-item-result [itemResult]="result"></app-item-result>
-</ng-container>
+<app-paginator-result *ngIf="resultList()?.total" (pageChanged)="onChangePage($event)"
+    [length]="resultList()?.total ?? 0" [pageIndex]="pageIndex">
+</app-paginator-result>
+<div class="results">
+    <app-item-result *ngFor="let result of resultList()?.hits" [itemResult]="result"></app-item-result>
+</div>

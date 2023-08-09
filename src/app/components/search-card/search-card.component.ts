@@ -7,10 +7,9 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatDialogModule } from '@angular/material/dialog';
 import { FilterListComponent } from './components/filter-list/filter-list.component';
-import { FiltersConfigService } from 'src/app/services/filters-config.service';
+import { SearchConfigService } from 'src/app/services/search-config.service';
 import { MatBadgeModule } from '@angular/material/badge';
 import { FormsModule } from '@angular/forms';
-import { HttpFilterService } from 'src/app/services/http-filter.service';
 
 @Component({
   selector: 'app-search-card',
@@ -31,7 +30,7 @@ import { HttpFilterService } from 'src/app/services/http-filter.service';
 })
 export class SearchCardComponent {
 
-  private readonly _filtersService = inject(FiltersConfigService)
+  private readonly _filtersService = inject(SearchConfigService)
 
   @Output() public readonly searchedValue = new EventEmitter<string>()
 

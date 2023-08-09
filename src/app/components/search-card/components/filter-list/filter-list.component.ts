@@ -4,7 +4,7 @@ import { MatChipsModule } from '@angular/material/chips';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatExpansionModule } from '@angular/material/expansion';
-import { FiltersConfigService } from 'src/app/services/filters-config.service';
+import { SearchConfigService } from 'src/app/services/search-config.service';
 import { Filter, FilterType } from 'src/app/core/types/main.types';
 import { getObjectMainProp } from 'src/app/core/utils/main.util';
 import { GetFilterValuePipe } from 'src/app/pipes/get-filter-value.pipe';
@@ -26,7 +26,7 @@ import { GetFilterPropPipe } from 'src/app/pipes/get-filter-prop.pipe';
 })
 export class FilterListComponent {
 
-  private readonly _filtersService = inject(FiltersConfigService)
+  private readonly _filtersService = inject(SearchConfigService)
 
   get filters() {
     return this._filtersService.filters()
